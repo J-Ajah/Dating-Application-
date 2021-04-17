@@ -16,7 +16,7 @@ let users = [
     {
         name: 'Ronald',
         gender: 'M',
-        hobby: 'Music',
+        hobby: 'music',
         avatar: 'avatar2.png',
         age: 18
     },
@@ -24,7 +24,7 @@ let users = [
     {
         name: 'Christopher',
         gender: 'M',
-        hobby: 'Sports',
+        hobby: 'sports',
         avatar: 'avatar1.png',
         age: 12
     },
@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
 
         //get hobby
         let hobbyField = document.querySelector('#hobby');
-        let hobby = hobbyField.value;
+        let hobby = hobbyField.value.toLowerCase();
         console.log(hobby);
 
         //get min and max age
@@ -109,7 +109,7 @@ window.addEventListener('load', () => {
             <img src=\" assets/${userAvatar}\"/>
             <div class="person-info">
              <div> Name: ${userName} </div>
-             <div> Hobby: ${hobby} </div>
+             <div> Hobby: ${toPascalCase(hobby)} </div>
              <div> age: ${age} </div>
              <button class="addFriend"> Add friend </button></div>
             </div>  
@@ -128,6 +128,21 @@ window.addEventListener('load', () => {
         minAge.value = '';
         maxAge.value = '';
     }
+
+
+    //converts strings to pascal case
+    function toPascalCase(string) {
+        return `${string}`
+          .replace(new RegExp(/[-_]+/, 'g'), ' ')
+          .replace(new RegExp(/[^\w\s]/, 'g'), '')
+          .replace(
+            new RegExp(/\s+(.)(\w+)/, 'g'),
+            ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`
+          )
+          .replace(new RegExp(/\s/, 'g'), '')
+          .replace(new RegExp(/\w/), s => s.toUpperCase());
+      }
+    
 
 
     var searchbtn = document.querySelector('#searchBtn');

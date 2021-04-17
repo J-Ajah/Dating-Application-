@@ -15,7 +15,7 @@ body{
 #header{
     background-color: #0d59af;
     height: 50px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     text-align: center;
     line-height: 40px;
     color:white;
@@ -36,15 +36,26 @@ h3{
 
 .row{
     align-items: center;
+    background-image: url(../assets/dating2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    height: 400px;
+    padding: 30px;
+    /* background-attachment: fixed; */
 }
 .row-fill{
     width: 70%;
-    margin:10px auto;
+    margin:0px auto 10px auto;
     padding: 10px 10px;
-    border-radius: 10px;
-    border: solid 0px rgb(153, 139, 139);
+    border-radius: 5px;
+    background-color: #7070706e;
+    border: solid 0px #998b8b;
+    color: white;
+    font-size: 2rem;
     box-shadow: 2px 2px 4px rgb(202, 201, 201);
     font-size: 1.2rem;
+    text-shadow: 2px 2px 4px black;
     text-align: center;
     justify-content: left;
     border-bottom:solid 0px black; ;
@@ -102,10 +113,10 @@ input[type=number] {
     position: relative;
      margin:30px 20px 10px 0; 
     width: 80%;
-    border: dotted 1px rgb(112, 112, 112);
+    border: solid 1px rgb(204, 200, 200);
     margin: auto;
     line-height: 50px;
-    background-color:  #f8f8f8;
+    background-color:  rgba(211, 212, 212, 0.836);
     border-radius: 10px;
     padding: 2rem;
 }
